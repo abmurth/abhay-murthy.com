@@ -1,20 +1,26 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import TabBar from "./components/TabBar";
+import StatusBar from "./components/StatusBar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const jetbrains = JetBrains_Mono({
+  variable: "--font-jetbrains",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const grotesk = Space_Grotesk({
+  variable: "--font-grotesk",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Abhay Murthy",
-  description: "Personal website of Abhay Murthy",
+  title: {
+    default: "Abhay Murthy",
+    template: "%s — Abhay Murthy",
+  },
+  description:
+    "Abhay Murthy — bioengineering + business at UC Berkeley M.E.T. Neurotech, product, and therapeutics.",
 };
 
 export default function RootLayout({
@@ -25,9 +31,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${jetbrains.variable} ${grotesk.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="flex min-h-full flex-col">
+        <TabBar />
+        <main className="site-main flex-1">{children}</main>
+        <StatusBar />
+      </body>
     </html>
   );
 }
