@@ -88,7 +88,7 @@ const recognition: RecognitionEntry[] = [
 const education: EducationEntry[] = [
   {
     school: "UC Berkeley — M.E.T. Program",
-    degree: "B.S. Bioengineering + B.S. Business Administration",
+    degree: "B.S. Bioengineering + B.S. Business Administration, Minor in EECS",
     dates: "Aug 2026 – May 2030",
     body: "A prestigious and highly selective dual-degree program (~1% acceptance rate) uniting UC Berkeley's College of Engineering with the Haas School of Business. Selected as one of approximately 50 students worldwide.",
     tags: ["~1% acceptance", "~50 students worldwide", "dual degree"],
