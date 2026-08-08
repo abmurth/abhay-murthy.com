@@ -5,7 +5,6 @@ const socials = [
   { href: "https://www.linkedin.com/in/abhay-murthy", label: "linkedin" },
   { href: "https://www.instagram.com/abhaymuurthy", label: "instagram" },
   { href: "mailto:abhaymurthy1@gmail.com", label: "email" },
-  { href: "/AbhayMurthy_ResearchResume.pdf", label: "resume" },
 ];
 
 export default function StatusBar() {
