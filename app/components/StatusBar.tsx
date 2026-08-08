@@ -10,7 +10,7 @@ const socials = [
 
 export default function StatusBar() {
   return (
-    <footer className="fixed inset-x-0 bottom-0 z-50 border-t border-line bg-[rgba(14,15,18,0.88)] text-[0.7rem] backdrop-blur-md">
+    <footer className="fixed inset-x-0 bottom-0 z-50 border-t border-line bg-[var(--header-bg)] text-[0.7rem] backdrop-blur-md">
       <div className="mx-auto flex w-full max-w-[820px] items-center justify-between gap-3 overflow-x-auto px-3 py-1.5 sm:px-5">
         <span className="hidden shrink-0 items-center gap-1 font-mono text-muted sm:flex">
           <MapPin size={11} aria-hidden="true" />

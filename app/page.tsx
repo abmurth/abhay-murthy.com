@@ -132,7 +132,7 @@ export default function Home() {
 
       {/* ---- sign-off ---- */}
       <p className="rise mt-16 text-sm text-muted" style={stagger(3)}>
-        Thanks for stopping by &mdash; say hi through the links below.
+        Say hi through the links below.
       </p>
     </>
   );

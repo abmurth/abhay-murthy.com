@@ -33,11 +33,11 @@ export interface EducationEntry {
 }
 
 const categories: Record<Category, { label: string; color: string }> = {
-  research: { label: "research", color: "#7da9d8" },
-  management: { label: "management / industry", color: "#8b909a" },
+  research: { label: "research", color: "var(--tag-blue)" },
+  management: { label: "management / industry", color: "var(--muted)" },
 };
 
-const neutralDot = "#565b66";
+const neutralDot = "var(--faint)";
 
 const stagger = (i: number) => ({ "--stagger": i } as CSSProperties);
 

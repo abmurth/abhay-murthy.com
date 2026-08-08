@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import ThemeToggle from "./ThemeToggle";
 
 const tabs = [
   { href: "/", label: "home" },
@@ -15,12 +16,13 @@ export default function TabBar() {
   const pathname = usePathname();
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-line bg-[rgba(14,15,18,0.85)] backdrop-blur-md">
-      <nav
-        aria-label="Pages"
-        className="mx-auto flex w-full max-w-[820px] items-center gap-1 overflow-x-auto px-3 sm:px-5"
-        style={{ scrollbarWidth: "none" }}
-      >
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-line bg-[var(--header-bg)] backdrop-blur-md">
+      <div className="mx-auto flex w-full max-w-[820px] items-center px-3 sm:px-5">
+        <nav
+          aria-label="Pages"
+          className="flex flex-1 items-center gap-1 overflow-x-auto"
+          style={{ scrollbarWidth: "none" }}
+        >
         {tabs.map((tab) => {
           const active = pathname === tab.href;
           return (
@@ -40,9 +42,11 @@ export default function TabBar() {
                 />
               ) : null}
             </Link>
-          );
-        })}
-      </nav>
+            );
+          })}
+        </nav>
+        <ThemeToggle />
+      </div>
     </header>
   );
 }

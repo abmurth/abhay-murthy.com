@@ -83,7 +83,7 @@ const research: Research[] = [
     topics: ["neuroscience", "mathematical modeling", "Python"],
     venue: {
       label: "Society for Neuroscience",
-      color: "#7da9d8",
+      color: "var(--tag-blue)",
       href: "https://www.sfn.org/-/media/SfN/Documents/NEW-SfN/Meetings/Neuroscience-2025/Abstracts-and-Sessions/Abstract-PDFs/SFN25_Abstracts-PDF-LB_Final.pdf",
     },
     link: {
@@ -99,7 +99,7 @@ const research: Research[] = [
     blurb:
       "Modeled the personal and financial fallout of online sports gambling for the U.S. Treasury. Estimated how much disposable income Americans actually have from federal spending data, then used statistical models to predict who is most likely to bet.",
     topics: ["mathematical modeling", "statistics", "economics"],
-    venue: { label: "M3C", color: "#d4b06a" },
+    venue: { label: "M3C", color: "var(--tag-gold)" },
     link: {
       href: "https://m3challenge.siam.org/wp-content/uploads/19018.pdf",
       label: "Read the paper",
@@ -204,7 +204,7 @@ function ResearchItem({ entry, index }: { entry: Research; index: number }) {
                 className="chip transition-opacity hover:opacity-80"
                 style={{
                   color: entry.venue.color,
-                  borderColor: `${entry.venue.color}55`,
+                  borderColor: `color-mix(in srgb, ${entry.venue.color} 33%, transparent)`,
                 }}
               >
                 {entry.venue.label} ↗
@@ -214,7 +214,7 @@ function ResearchItem({ entry, index }: { entry: Research; index: number }) {
                 className="chip"
                 style={{
                   color: entry.venue.color,
-                  borderColor: `${entry.venue.color}55`,
+                  borderColor: `color-mix(in srgb, ${entry.venue.color} 33%, transparent)`,
                 }}
               >
                 {entry.venue.label}

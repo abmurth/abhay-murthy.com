@@ -11,11 +11,11 @@ export const metadata: Metadata = {
 type Subject = "chem" | "bioe" | "business" | "math" | "ml";
 
 const subjects: Record<Subject, { label: string; color: string }> = {
-  chem: { label: "chem", color: "#6cc5cf" },
-  bioe: { label: "bioe", color: "#8fb8a2" },
-  business: { label: "bus", color: "#d4b06a" },
-  math: { label: "math", color: "#7da9d8" },
-  ml: { label: "ml", color: "#b39fd8" },
+  chem: { label: "chem", color: "var(--tag-teal)" },
+  bioe: { label: "bioe", color: "var(--tag-green)" },
+  business: { label: "bus", color: "var(--tag-gold)" },
+  math: { label: "math", color: "var(--tag-blue)" },
+  ml: { label: "ml", color: "var(--tag-purple)" },
 };
 
 type Course = {
@@ -90,7 +90,10 @@ function CourseRow({
       </span>
       <span
         className="chip ml-auto shrink-0"
-        style={{ color: subject.color, borderColor: `${subject.color}55` }}
+        style={{
+          color: subject.color,
+          borderColor: `color-mix(in srgb, ${subject.color} 33%, transparent)`,
+        }}
       >
         {subject.label}
       </span>
