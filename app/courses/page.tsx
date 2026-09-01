@@ -47,7 +47,7 @@ const berkeleyCourses: Course[] = [
   },
   {
     code: "UGBA 10",
-    name: "Principles of Business",
+    name: "Foundations of Business",
     subject: "business",
   },
   {
