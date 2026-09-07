@@ -38,7 +38,7 @@ type Research = {
 const projects: Project[] = [
   {
     name: "Cas9 Insertion Tolerance",
-    meta: "Jupyter Notebook · Active · 2026",
+    meta: "Jupyter Notebook · Complete · 2026",
     blurb:
       "Predicting which spots inside Cas9 — the protein behind CRISPR gene editing — can have a second protein tucked into them without breaking it. Trained on the position-by-position screen from Oakes et al., Nature Biotechnology (2016).",
     topics: ["CRISPR", "protein engineering", "data analysis"],
@@ -46,7 +46,7 @@ const projects: Project[] = [
   },
   {
     name: "Micrograd",
-    meta: "Python · In progress · 2026",
+    meta: "Python · Complete · 2026",
     blurb:
       "A tiny neural network library written from scratch, with no outside libraries — rebuilding the math that lets a model learn from its own mistakes, to understand how it actually works.",
     topics: ["machine learning", "built from scratch"],
@@ -54,7 +54,7 @@ const projects: Project[] = [
   },
   {
     name: "TurnOn",
-    meta: "Python · Shipped · 2024",
+    meta: "Python · Complete · 2024",
     blurb:
       "A model that listens for the phrase “turn on” and nothing else. Hooked up to a computer, it wakes the machine from sleep without anyone touching the keyboard.",
     topics: ["speech recognition", "audio", "deep learning"],
